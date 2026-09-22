@@ -59,7 +59,7 @@ export default function Index() {
         <View style={styles.lightOrangeSection}>
           <Text style={styles.textCornerHeader}>Text</Text>
           <View style={styles.longOrangeSubSection}>
-            <Text style={styles.lastSection}>Text</Text>
+            {/* <Text style={styles.lastSection}>Text</Text> */}
           </View>
         </View>
       </View>
