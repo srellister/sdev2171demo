@@ -1,11 +1,19 @@
-import { Text, View, StyleSheet } from "react-native";
-import { Redirect } from "expo-router";
+import { View, StyleSheet } from "react-native";
+import { useRouter } from "expo-router";
+import MyButton from "../components/MyButton";
 
-export default function Index() {
+export default function HomeScreen() {
+  const router = useRouter();
   return (
     <View style={styles.container}>
-      <Redirect href="./screen01" />
-      <Text>I didn't redirect</Text>
+      <MyButton
+        text="Text Input 1"
+        onPress={() => router.push("/text_input")}
+      ></MyButton>
+      <MyButton
+        text="Text Input 2 - auto grab"
+        onPress={() => router.push("/text_input_auto")}
+      ></MyButton>
     </View>
   );
 }
@@ -13,8 +21,9 @@ export default function Index() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "grey",
+    alignItems: "center",
+    gap: 15,
+    backgroundColor: "black",
   },
 });
